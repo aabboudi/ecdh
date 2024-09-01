@@ -22,10 +22,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "#",
-    twitter: "#",
-    docs: "#",
-    discord: "#",
-    sponsor: "#",
+    linkedin: "#",
+    instagram: "#",
+    tiktok: "#",
+    donate: "#",
   },
 };

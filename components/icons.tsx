@@ -24,6 +24,70 @@ export const Logo: React.FC<IconSvgProps> = ({
   </svg>
 );
 
+export const InstagramIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
+      <rect stroke="currentColor" fillOpacity={0} strokeWidth={3} width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+      <path stroke="currentColor" fillOpacity={0} strokeWidth={3} d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+    </svg>
+  );
+};
+
+export const TiktokIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
+      <path
+        d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+export const LinkedinIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      fill="currentColor"
+      {...props}
+    >
+      <path
+        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+      />
+      <rect width="4" height="12" x="2" y="9"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  );
+};
+
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,

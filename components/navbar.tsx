@@ -8,6 +8,7 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
+import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
@@ -16,16 +17,31 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
+  TiktokIcon,
+  InstagramIcon,
   HeartFilledIcon,
   Logo,
+  LinkedinIcon,
 } from "@/components/icons";
+
+const Donate = () => {
+  return (
+    <Button
+      as={Link}
+      className="text-sm font-normal text-default-600 bg-default-100"
+      href={siteConfig.links.donate}
+      startContent={<HeartFilledIcon className="text-success" />}
+      variant="ghost"
+    >
+      Donate
+    </Button>
+  )
+}
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    // Review z-index and element position, close after click
+    <NextUINavbar className="sticky top-0 z-50" maxWidth="xl">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -33,13 +49,13 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">ECDH</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-8 justify-start ml-4">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium font-semibold",
                 )}
                 color="foreground"
                 href={item.href}
@@ -52,56 +68,54 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className="hidden lg:flex basis-1/5 lg:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
+        <NavbarItem className="hidden lg:flex gap-2">
+          <Link isExternal aria-label="LinkedIn" href={siteConfig.links.linkedin}>
+            <LinkedinIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
+          <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
+            <InstagramIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
+          <Link isExternal aria-label="Tiktok" href={siteConfig.links.tiktok}>
+            <TiktokIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Donate
-          </Button>
+        <NavbarItem className="hidden lg:flex">
+          <Donate />
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
+      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+        <Donate />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-12 flex flex-col text-center gap-6">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color="foreground"
-                href="#"
-                size="lg"
-              >
+              <Link color="foreground" href={item.href} size="lg">
                 {item.label}
               </Link>
             </NavbarMenuItem>
           ))}
+          <Divider />
+          <NavbarItem className="flex justify-center gap-4">
+            <Link isExternal aria-label="LinkedIn" href={siteConfig.links.linkedin}>
+              <LinkedinIcon className="text-default-500" />
+            </Link>
+            <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
+              <InstagramIcon className="text-default-500" />
+            </Link>
+            <Link isExternal aria-label="Tiktok" href={siteConfig.links.tiktok}>
+              <TiktokIcon className="text-default-500" />
+            </Link>
+            <Divider orientation="vertical" />
+            <ThemeSwitch />
+          </NavbarItem>
         </div>
       </NavbarMenu>
     </NextUINavbar>
