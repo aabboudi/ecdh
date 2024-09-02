@@ -14,7 +14,7 @@ export default function PartnersPage() {
               class: "text-center text-black dark:text-white font-bold",
             })}
           >
-            <span className="text-yellow-700 dark:text-yellow-600">Gold</span>
+            <span className="text-yellow-700 dark:text-yellow-600">Gold&nbsp;</span>
             Sponsors
           </h2>
         </div>
@@ -47,7 +47,7 @@ export default function PartnersPage() {
               class: "text-center text-black dark:text-white font-bold",
             })}
           >
-            Educational Partners
+            Educational&nbsp;Partners
           </h2>
         </div>
         <div className="max-w-full h-36 m-3 border-2 rounded border-gray-400">
@@ -79,7 +79,7 @@ export default function PartnersPage() {
               class: "text-center text-black dark:text-white font-bold",
             })}
           >
-            <span className="text-zinc-500 dark:text-zinc-500">Silver</span>
+            <span className="text-zinc-500 dark:text-zinc-500">Silver&nbsp;</span>
             Sponsors
           </h2>
         </div>
@@ -112,7 +112,7 @@ export default function PartnersPage() {
               class: "text-center text-black dark:text-white font-bold",
             })}
           >
-            <span className="text-amber-900 dark:text-amber-700">Bronze</span>
+            <span className="text-amber-900 dark:text-amber-700">Bronze&nbsp;</span>
             Sponsors
           </h2>
         </div>
