@@ -35,8 +35,8 @@ const Donate = () => {
     >
       Donate
     </Button>
-  )
-}
+  );
+};
 
 export const Navbar = () => {
   return (
@@ -72,10 +72,18 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden lg:flex gap-2">
-          <Link isExternal aria-label="LinkedIn" href={siteConfig.links.linkedin}>
+          <Link
+            isExternal
+            aria-label="LinkedIn"
+            href={siteConfig.links.linkedin}
+          >
             <LinkedinIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
+          <Link
+            isExternal
+            aria-label="Instagram"
+            href={siteConfig.links.instagram}
+          >
             <InstagramIcon className="text-default-500" />
           </Link>
           <Link isExternal aria-label="Tiktok" href={siteConfig.links.tiktok}>
@@ -104,10 +112,18 @@ export const Navbar = () => {
           ))}
           <Divider />
           <NavbarItem className="flex justify-center gap-4">
-            <Link isExternal aria-label="LinkedIn" href={siteConfig.links.linkedin}>
+            <Link
+              isExternal
+              aria-label="LinkedIn"
+              href={siteConfig.links.linkedin}
+            >
               <LinkedinIcon className="text-default-500" />
             </Link>
-            <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
+            <Link
+              isExternal
+              aria-label="Instagram"
+              href={siteConfig.links.instagram}
+            >
               <InstagramIcon className="text-default-500" />
             </Link>
             <Link isExternal aria-label="Tiktok" href={siteConfig.links.tiktok}>
