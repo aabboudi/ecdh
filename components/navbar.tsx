@@ -41,17 +41,21 @@ const Donate = () => {
 
 export const Navbar = () => {
   return (
-    <NextUINavbar className="sticky shadow-lg top-0 z-50" maxWidth="xl" position="static">
+    <NextUINavbar
+      className="fixed shadow-lg top-0 z-50"
+      maxWidth="xl"
+      position="static"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             {/* <Logo /> */}
             <Image
               alt="ECDH Logo"
+              className="absolute mt-3 ml-[-30px]"
+              height={90}
               src="/ecdh_logo.svg"
               width={90}
-              height={90}
-              className="absolute mt-3 ml-[-30px]"
             />
             <p className="font-bold text-inherit ml-12">ECDH</p>
           </NextLink>
