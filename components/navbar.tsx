@@ -10,6 +10,7 @@ import {
 import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
+import Image from "next/image";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -40,13 +41,23 @@ const Donate = () => {
 
 export const Navbar = () => {
   return (
-    // Review z-index and element position, close after click
-    <NextUINavbar className="sticky top-0 z-50" maxWidth="xl">
+    <NextUINavbar
+      className="fixed shadow-lg top-0 z-50"
+      maxWidth="xl"
+      position="static"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ECDH</p>
+            {/* <Logo /> */}
+            <Image
+              alt="ECDH Logo"
+              className="absolute mt-3 ml-[-30px]"
+              height={90}
+              src="/ecdh_logo.svg"
+              width={90}
+            />
+            <p className="font-bold text-inherit ml-12">ECDH</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-8 justify-start ml-4">
