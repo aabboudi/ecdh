@@ -43,7 +43,7 @@ export const Navbar = () => {
   return (
     <NextUINavbar
       className="fixed shadow-lg top-0 z-50"
-      maxWidth="xl"
+      maxWidth="2xl"
       position="static"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
