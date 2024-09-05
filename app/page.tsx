@@ -4,6 +4,8 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { Divider } from "@nextui-org/divider";
 
 import { title, subtitle } from "@/components/primitives";
+import { CurvedUnderline } from "@/components/ui/animated-underlines";
+import { WavyBackground } from "@/components/ui/wavy-background";
 
 export default function Home() {
   const EVENT = true;
@@ -11,21 +13,31 @@ export default function Home() {
   return (
     <>
       {EVENT && (
-        <section className="grid lg:grid-cols-2 content-center min-h-screen">
+        <section className="grid lg:grid-cols-2 gap-8 content-center min-h-screen">
           <div className="flex flex-col justify-center">
-            <div className="min-h-[60vh] flex flex-col gap-4 justify-center text-center lg:text-start z-10">
-              <h2>Upcoming project</h2>
+            <div className="min-h-[60vh] flex flex-col gap-6 justify-center items-center lg:items-start text-center lg:text-start z-[1]">
+              <h2 className="relative w-fit text-xl">
+                Upcoming project
+                <CurvedUnderline />
+              </h2>
+
               <div className="flex gap-4 justify-center lg:justify-start font-semibold text-green-600">
                 <p>7th Edition</p>
-                <Divider className="h-full" orientation="vertical" />
+                <Divider
+                  className="h-full w-0.5 bg-neutral-500"
+                  orientation="vertical"
+                />
                 <p>08 - 11 August</p>
-                <Divider className="h-full" orientation="vertical" />
+                <Divider
+                  className="h-full w-0.5 bg-neutral-500"
+                  orientation="vertical"
+                />
                 <p>Beni Harchen</p>
               </div>
               <h1 className={title()}>Voyage Humanitaire</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                maiores doloremque quas. Aperiam, incidunt nobis?
+              <p className="text-balance">
+                We accept monetary donations as well as in-kind. Porro maiores
+                doloremque quas. Aperiam, incidunt nobis?
               </p>
               <div className="flex justify-center lg:justify-start gap-4">
                 <Link
@@ -34,7 +46,7 @@ export default function Home() {
                   })}
                   href="/projects"
                 >
-                  View Projects
+                  Donate
                 </Link>
                 <Link
                   className={buttonStyles({
@@ -43,58 +55,40 @@ export default function Home() {
                   })}
                   href="/projects"
                 >
-                  View Projects
+                  Come with us
                 </Link>
               </div>
             </div>
-            {/* <svg className="absolute top-50 start-1/2 w-[1900px] transform -translate-x-1/2 z-0" width="2745" height="488" viewBox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" className="stroke-neutral-300/50" stroke="currentColor" />
-              <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" className="stroke-neutral-300/50" stroke="currentColor" />
-            </svg> */}
+            <WavyBackground />
           </div>
           <div className="max-h-[60vh] overflow-hidden grid grid-cols-3 gap-4 justify-center items-center">
-            {/* <div className="max-h-[60vh] overflow-clip"> */}
             <div className="h-full relative grid grid-cols-2 col-span-2 gap-4 overflow-hidden">
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg col-span-2"
                 height={500}
-                src="/map.png"
+                src="/hero1.webp"
                 width={500}
               />
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg"
                 height={500}
-                src="/map.png"
+                src="/hero2.webp"
                 width={500}
               />
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg"
                 height={500}
-                src="/map.png"
+                src="/hero3.webp"
                 width={500}
               />
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg col-span-2"
                 height={500}
-                src="/map.png"
+                src="/hero4.webp"
                 width={500}
               />
             </div>
@@ -103,14 +97,14 @@ export default function Home() {
                 alt="map"
                 className="object-cover w-full h-full rounded-lg"
                 height={500}
-                src="/map.png"
+                src="/hero5.webp"
                 width={500}
               />
             </div>
           </div>
           {/* <Image
             alt="Map Image"
-            src="/hero.jpg"
+            src="/hero.webp"
             fill
             className="object-cover absolute inset-0"
           /> */}
@@ -148,7 +142,7 @@ export default function Home() {
             alt="Map of Morocco"
             className="rounded-lg"
             height={500}
-            src="/map.png"
+            src="/map.webp"
             width={500}
           />
         </div>
@@ -157,17 +151,17 @@ export default function Home() {
       <section className="relative w-full min-h-[60vh] flex flex-col gap-4 justify-center items-center">
         <h1 className={title({ className: "relative" })}>
           Our Values
-        <svg
-          className="absolute -bottom-5 start-0 end-0"
-          fill="none"
-          preserveAspectRatio="none"
-          stroke="currentColor"
-          strokeWidth={3}
-          viewBox="0 0 500 150"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
-        </svg>
+          <svg
+            className="absolute -bottom-5 start-0 end-0"
+            fill="none"
+            preserveAspectRatio="none"
+            stroke="currentColor"
+            strokeWidth={3}
+            viewBox="0 0 500 150"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+          </svg>
         </h1>
         <h2 className={subtitle({ className: "font-bold" })}>
           Par les jeunes <br /> Pour les jeunes
@@ -225,8 +219,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden">
-        <div className="max-w-[85rem] px-4 py-12 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+      <section className="relative">
+        <div className="py-12 lg:py-16">
           <div aria-hidden="true" className="flex -z-[1] absolute start-0">
             <div className="bg-green-200 opacity-20 blur-3xl w-[1036px] h-[300px] dark:bg-green-900 dark:opacity-20" />
           </div>
@@ -236,9 +230,9 @@ export default function Home() {
               <Image
                 alt="Avatar"
                 className="rounded-xl"
-                height={1000}
-                src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-                width={1000}
+                height={250}
+                src="/yig.webp"
+                width={500}
               />
             </div>
 
@@ -259,8 +253,12 @@ export default function Home() {
                       fill="currentColor"
                     />
                   </svg>
-                  <p className="relative z-10">
-                    The desire to create ECDH emerged primarily to make a difference in society. I got involved in this project because I had envisioned something significant. In the end, I learned that it was just the beginning of an adventure that surpassed my expectations.
+                  <p className="relative md:text-justify z-10">
+                    The desire to create ECDH emerged primarily to make a
+                    difference in society. I got involved in this project
+                    because I had envisioned something significant. In the end,
+                    I learned that it was just the beginning of an adventure
+                    that surpassed my expectations.
                   </p>
                 </div>
 
@@ -271,7 +269,7 @@ export default function Home() {
                         alt="Avatar"
                         className="size-12 rounded-full"
                         height={1000}
-                        src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                        src="/yig.webp"
                         width={1000}
                       />
                     </div>

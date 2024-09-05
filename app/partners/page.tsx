@@ -2,7 +2,7 @@ import { title, subtitle } from "@/components/primitives";
 
 export default function PartnersPage() {
   return (
-    <main>
+    <>
       <section className="flex flex-col justify-center text-center">
         <h1 className={title()}>Partners &amp; Sponsors</h1>
         <p>None of our project would have been possible without</p>
@@ -144,6 +144,6 @@ export default function PartnersPage() {
           Insert sponsor logo
         </div>
       </section>
-    </main>
+    </>
   );
 }
