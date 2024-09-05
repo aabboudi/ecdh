@@ -67,28 +67,28 @@ export default function Home() {
                 alt="map"
                 className="object-cover w-full h-full rounded-lg col-span-2"
                 height={500}
-                src="/hero1.jpg"
+                src="/hero1.webp"
                 width={500}
               />
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg"
                 height={500}
-                src="/hero2.jpeg"
+                src="/hero2.webp"
                 width={500}
               />
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg"
                 height={500}
-                src="/hero3.png"
+                src="/hero3.webp"
                 width={500}
               />
               <Image
                 alt="map"
                 className="object-cover w-full h-full rounded-lg col-span-2"
                 height={500}
-                src="/hero4.jpeg"
+                src="/hero4.webp"
                 width={500}
               />
             </div>
@@ -97,14 +97,14 @@ export default function Home() {
                 alt="map"
                 className="object-cover w-full h-full rounded-lg"
                 height={500}
-                src="/hero5.png"
+                src="/hero5.webp"
                 width={500}
               />
             </div>
           </div>
           {/* <Image
             alt="Map Image"
-            src="/hero.jpg"
+            src="/hero.webp"
             fill
             className="object-cover absolute inset-0"
           /> */}
@@ -142,7 +142,7 @@ export default function Home() {
             alt="Map of Morocco"
             className="rounded-lg"
             height={500}
-            src="/map.png"
+            src="/map.webp"
             width={500}
           />
         </div>
@@ -231,7 +231,7 @@ export default function Home() {
                 alt="Avatar"
                 className="rounded-xl"
                 height={250}
-                src="/yig.jpg"
+                src="/yig.webp"
                 width={500}
               />
             </div>
@@ -269,7 +269,7 @@ export default function Home() {
                         alt="Avatar"
                         className="size-12 rounded-full"
                         height={1000}
-                        src="/yig.jpg"
+                        src="/yig.webp"
                         width={1000}
                       />
                     </div>
