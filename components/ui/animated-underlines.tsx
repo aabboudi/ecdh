@@ -29,7 +29,7 @@ export const CurvedUnderline = () => {
 export const ScribbleUnderline = () => {
   return (
     <svg
-      className="absolute -top-3 start-0 end-0"
+      className="absolute -top-6 start-0 end-0"
       fill="none"
       preserveAspectRatio="none"
       stroke="currentColor"

@@ -42,7 +42,7 @@ const Donate = () => {
 export const Navbar = () => {
   return (
     <NextUINavbar
-      className="fixed shadow-lg top-0 z-50"
+      className="fixed shadow-lg top-0 z-[4]"
       maxWidth="2xl"
       position="static"
     >
