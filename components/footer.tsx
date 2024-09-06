@@ -46,7 +46,7 @@ export const Footer = () => {
               <p>
                 <Link
                   className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
-                  href="#"
+                  href="/yearbook"
                 >
                   Yearbook
                   <span className="inline-block text-xs bg-green-800 text-white py-1 px-2 rounded-lg">
