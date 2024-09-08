@@ -12,7 +12,7 @@ export default function AboutPage() {
             <h1 className={title({ size: "lg", color: "green" })}>ECDH</h1>
             <h1 className={title({ size: "lg" })}>
               est&nbsp;
-              <FlipWords words={["par", "pour"]} duration={1500} />
+              <FlipWords duration={1500} words={["par", "pour"]} />
             </h1>
             <h1 className={title({ size: "lg" })}>les jeunes</h1>
           </div>
