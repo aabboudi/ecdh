@@ -1,6 +1,6 @@
-import { title } from "@/components/primitives";
 import Image from "next/image";
 
+import { title } from "@/components/primitives";
 import { ScribbleUnderline } from "@/components/ui/animated-underlines";
 
 const images = [
@@ -10,7 +10,7 @@ const images = [
   "/hero3.webp",
   "/hero4.webp",
   "/hero5.webp",
-]
+];
 
 export default function Yearbook() {
   return (

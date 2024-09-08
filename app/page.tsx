@@ -253,7 +253,7 @@ export default function Home() {
                       fill="currentColor"
                     />
                   </svg>
-                  <p className="relative md:text-justify z-10">
+                  <p className="relative md:text-justify z-[1]">
                     The desire to create ECDH emerged primarily to make a
                     difference in society. I got involved in this project
                     because I had envisioned something significant. In the end,
