@@ -42,7 +42,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
     >
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
+        {data.map((item: TimelineEntry, index: number) => (
           <div key={index} className="flex justify-start pt-10 md:gap-10">
             <div className="sticky flex flex-col md:flex-row z-[3] items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
@@ -64,11 +64,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {item.description}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-                  {item.images.map((img: string) => (
+                  {item.images.map((img: string, imgIndex: number) => (
                     <Image
                       alt="startup template"
                       className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                       height={500}
+                      key={`${index}-${imgIndex}`}
                       src={img}
                       width={500}
                     />
@@ -79,13 +80,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           </div>
         ))}
         <div
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
           style={{
             height: height + "px",
           }}
         >
           <motion.div
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-green-500 via-green-950 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-green-500 via-green-950 to-transparent from-[0%] via-[10%] rounded-full"
             style={{
               height: heightTransform,
               opacity: opacityTransform,
